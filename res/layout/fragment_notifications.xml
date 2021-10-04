@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/border_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/clothes_max"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/temp_max"/>
+
+    <TextView
+        android:id="@+id/temp_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/clothes1"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/textView"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintHorizontal_bias="0.05"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:paddingTop="10dp"
+        android:text="최고기온" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/border_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/clothes_min"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/temp_min"/>
+
+    <TextView
+        android:id="@+id/temp_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/clothes_max"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/textView"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        app:layout_constraintHorizontal_bias="0.05"
+        android:layout_marginTop="10dp"
+        android:text="최저기온" />
+
+    <android.widget.Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="알림바 켜기"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/left_btn_backgound"
+        app:layout_constraintTop_toBottomOf="@id/clothes_min" />
+
+    <android.widget.Button
+        android:id="@+id/btn_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/clothes_min"
+        app:layout_constraintLeft_toRightOf="@id/btn_start"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/right_btn_backgound"
+        android:text="알림바 끄기" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/border_black"
+        android:paddingBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/temparture"
+        app:layout_constraintEnd_toEndOf="@+id/temparture"
+        app:layout_constraintStart_toStartOf="@+id/temparture"
+        app:layout_constraintTop_toTopOf="@+id/clothes_image"/>
+
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/border_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/clothes1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clothes_temp"/>
+
+    <TextView
+        android:id="@+id/clothes1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/clothes_temp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:paddingBottom="10dp"
+        android:text="알맞은 의상1" />
+    <TextView
+        android:id="@+id/clothes_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/textView"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toBottomOf="@id/temparture"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:paddingTop="10dp"
+        android:textStyle="bold"
+        android:text="알맞은 온도" />
+
+
+    <ImageView
+        android:id="@+id/clothes_image"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bar2"
+        app:srcCompat="@android:drawable/ic_dialog_info" />
+
+
+    <TextView
+        android:id="@+id/temparture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:text="현재온도"
+        android:paddingBottom="15dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/clothes_image"
+        app:layout_constraintRight_toRightOf="@id/clothes_image"
+        app:layout_constraintTop_toBottomOf="@id/clothes_image" />
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="날짜"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.90"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_date"
+            app:layout_constraintHorizontal_bias="0.05"
+            android:textColor="@color/orange"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:text="오늘뭐입지?" />
+
+    <TextView
+        android:id="@+id/clothes_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/temp_max"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:paddingBottom="10dp"
+        android:text="최고온도일때 의상" />
+
+    <TextView
+        android:id="@+id/clothes_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/temp_min"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="최저온도일때 의상" />
+
+
+    <View
+        android:id="@+id/bar1"
+        android:layout_width="250dp"
+        android:layout_height="6dp"
+        android:background="@color/orange"
+        app:layout_constraintLeft_toLeftOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        />
+
+    <View
+        android:id="@+id/bar2"
+        android:layout_width="200dp"
+        android:layout_height="6dp"
+        android:background="@color/orange"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/bar1"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
